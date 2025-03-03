@@ -6,6 +6,9 @@ from PIL import Image
 import time
 
 LogReg_model=pickle.load(open('LogReg_model.pkl','rb'))
+DecisionTree_model=pickle.load(open('DecisionTree_model.pkl','rb'))
+NaiveBayes_model=pickle.load(open('NaiveBayes_model.pkl','rb'))
+RF_model=pickle.load(open('RF_model.pkl','rb'))
 
 
 data = {
@@ -65,7 +68,7 @@ def pert():
     """
 
     st.markdown(html_temp, unsafe_allow_html=True)
-    activities=['Naive Bayes (The Best Model)']
+    activities=['Naive Bayes (The Best Model)','Logistic Regression','Decision Tree','Random Forest']
     option=st.sidebar.selectbox("Which Model would you like to use?",activities)
     st.subheader(option)
     sn=st.slider('NITROGEN (N)', 0, 50)
@@ -95,7 +98,13 @@ def pert():
 
         if option=='Logistic Regression':
             st.info(classify(LogReg_model.predict(inputs)))
-        
+        elif option=='Decision Tree':
+            st.info(classify(DecisionTree_model.predict(inputs)))
+        elif option=='Naive Bayes':
+            st.info(classify(NaiveBayes_model.predict(inputs)))
+        else:
+            st.info(classify(RF_model.predict(inputs)))   
+
 def main():
 
         st.markdown("<h1 style='text-align: center; color: green;'>SowEasy</h1>", unsafe_allow_html=True)
