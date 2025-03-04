@@ -82,7 +82,7 @@ def pert():
     activities=['Naive Bayes (The Best Model)']
     option=st.sidebar.selectbox("Which Model would you like to use?",activities)
     st.subheader(option)
-    sn=st.slider('NITROGEN (N)', 0, 50)
+    sn=st.slider('NITROGEN (N)', 0, 50,value=30)
     sp=st.slider('PHOSPHOROUS (P)', 0, 50)
     pk=st.slider('POTASSIUM (K)', 0, 20)
     pt=st.slider('TEMPERATURE', 0, 50)
