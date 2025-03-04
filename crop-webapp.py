@@ -79,7 +79,7 @@ def pert():
     """
 
     st.markdown(html_temp, unsafe_allow_html=True)
-    activities=['Naive Bayes (The Best Model)']
+    activities=['Naive Bayes (The Best Model)','Logistic Regression', 'Decision Tree','Random Forest' ]
     option=st.sidebar.selectbox("Which Model would you like to use?",activities)
     st.subheader(option)
     sn=st.slider('NITROGEN (N)', 0, 50,value=30)
