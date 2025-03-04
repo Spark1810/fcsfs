@@ -85,7 +85,7 @@ def pert():
     sn=st.slider('NITROGEN (N)', 0, 50,value=30)
     sp=st.slider('PHOSPHOROUS (P)', 0, 50,value=20)
     pk=st.slider('POTASSIUM (K)', 0, 20,value=10)
-    pt=st.slider('TEMPERATURE', 0, 50,,value=30)
+    pt=st.slider('TEMPERATURE', 0, 50,value=30)
     phu=st.slider('HUMIDITY', 0, 100,value=60)
     pPh=st.slider('Ph', 0, 14,value=7)
     pr=st.slider('RAINFALL', 0, 300,value=110)
