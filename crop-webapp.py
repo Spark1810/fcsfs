@@ -15,6 +15,20 @@ data = {
     'Fertilizer Name': ['Urea', 'DAP', 'Fourteen-Thirty Five-Fourteen', 'DAP', 'Twenty Eight-Twenty Eight', 'Urea', 'Seventeen-Seventeen-Seventeen', 'Twenty-Twenty', 'Urea', 'Twenty Eight-Twenty Eight', 'Fourteen-Thirty Five-Fourteen', 'DAP', 'Seventeen-Seventeen-Seventeen', 'Urea', 'Twenty Eight-Twenty Eight', 'DAP', 'Seventeen-Seventeen-Seventeen', 'Urea', 'Twenty Eight-Twenty Eight', 'Urea', 'DAP', 'Twenty-Twenty', 'Seventeen-Seventeen-Seventeen', 'DAP', 'Urea', 'Twenty-Twenty', 'Twenty Eight-Twenty Eight', 'Fourteen-Thirty Five-Fourteen', 'Urea', 'DAP', 'Twenty-Twenty', 'Twenty Eight-Twenty Eight', 'DAP', 'Urea', 'Fourteen-Thirty Five-Fourteen', 'Twenty Eight-Twenty Eight', 'Urea', 'Fourteen-Thirty Five-Fourteen', 'DAP', 'Seventeen-Seventeen-Seventeen', 'DAP', 'Twenty-Twenty', 'Fourteen-Thirty Five-Fourteen', 'Twenty Eight-Twenty Eight', 'Urea', 'DAP', 'Fourteen-Thirty Five-Fourteen', 'Twenty-Twenty', 'Twenty Eight-Twenty Eight', 'Urea', 'Fourteen-Thirty Five-Fourteen', 'Twenty Eight-Twenty Eight', 'Twenty-Twenty', 'Urea', 'DAP', 'Seventeen-Seventeen-Seventeen', 'Twenty Eight-Twenty Eight', 'Urea', 'Twenty-Twenty', 'Seventeen-Seventeen-Seventeen', 'DAP', 'Urea', 'Twenty-Twenty', 'Twenty Eight-Twenty Eight', 'Ten-Twenty Six-Twenty Six', 'Urea', 'DAP', 'Twenty-Twenty', 'Fourteen-Thirty Five-Fourteen', 'Ten-Twenty Six-Twenty Six', 'Twenty-Twenty', 'Twenty Eight-Twenty Eight', 'Urea', 'Twenty Eight-Twenty Eight', 'Urea', 'DAP', 'Fourteen-Thirty Five-Fourteen', 'Twenty Eight-Twenty Eight', 'Ten-Twenty Six-Twenty Six', 'DAP', 'Fourteen-Thirty Five-Fourteen', 'Urea', 'DAP', 'Twenty-Twenty', 'Twenty Eight-Twenty Eight', 'Fourteen-Thirty Five-Fourteen', 'Ten-Twenty Six-Twenty Six', 'Urea', 'Ten-Twenty Six-Twenty Six', 'DAP', 'Fourteen-Thirty Five-Fourteen', 'Ten-Twenty Six-Twenty Six', 'Urea', 'Fourteen-Thirty Five-Fourteen', 'Twenty Eight-Twenty Eight', 'Ten-Twenty Six-Twenty Six', 'Urea', 'DAP', 'Twenty-Twenty']
 }
 
+crops = [
+        "rice", "maize", "chickpea", "kidneybeans", "pigeonpeas", 
+        "mothbeans", "mungbean", "blackgram", "lentil", "pomegranate", 
+        "banana", "mango", "grapes", "watermelon", "muskmelon", 
+        "apple", "orange", "papaya", "coconut", "cotton", 
+        "jute", "coffee", "tea", "sugarcane", "wheat", 
+        "rice", "maize", "chickpea", "kidneybeans", "pigeonpeas", 
+        "mothbeans", "mungbean", "blackgram", "lentil", "pomegranate", 
+        "banana", "mango", "grapes", "watermelon", "muskmelon", 
+        "apple", "orange", "papaya", "coconut", "cotton", 
+        "jute", "coffee", "tea", "sugarcane", "wheat" 
+        ]
+    
+
 # Convert to DataFrame
 df = pd.DataFrame(data)
 
@@ -80,6 +94,7 @@ def pert():
         nitrogen = sn
         potassium = pk
         phosphorous = sp
+        res=crops[sp-1]
 
         # Find matching fertilizer
         matching_fertilizer = df[(df['Nitrogen'] == nitrogen)]
@@ -90,6 +105,7 @@ def pert():
             fertilizer_name = (df['Fertilizer Name'].values[6])
 
         st.success(f'The Recommended Fertilizer is {fertilizer_name}')
+        st.info(f'The Suitable Crop is {res}')
 
 
 
