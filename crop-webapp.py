@@ -114,8 +114,8 @@ def pert():
         
 def main():
 
-        st.markdown("<h1 style='text-align: center; color: green;'>SowEasy</h1>", unsafe_allow_html=True)
-        st.markdown("<h4 style='text-align: center; color: green;'>Intelligent Fertilizer & Crop Recommendation System</h4>", unsafe_allow_html=True)
+        st.markdown("<h1 style='text-align: center; color: green;'>Smart Crop Using AI</h1>", unsafe_allow_html=True)
+        st.markdown("<h4 style='text-align: center; color: green;'>Telemetry Precision Agriculture Platform</h4>", unsafe_allow_html=True)
 
         menu = ["HOME","ADMIN LOGIN","USER LOGIN","SIGN UP","ABOUT US"]
         choice = st.sidebar.selectbox("Menu",menu)
