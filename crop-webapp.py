@@ -187,7 +187,7 @@ def main():
                         st.info("Go to User Login Menu to login")
 
         elif choice == "ABOUT US":
-                st.header("CREATED BY _**Dharshana SK**_")
+                st.header("CREATED BY _**Sudharshan Vijay SK**_")
 
 
 
